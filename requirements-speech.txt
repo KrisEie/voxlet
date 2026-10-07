@@ -1,0 +1,8 @@
+faster-whisper==1.2.1
+av==18.1.0
+ctranslate2==4.8.2
+piper-tts==1.8.0
+soundfile==0.14.0
+numpy==2.5.3
+huggingface-hub==1.33.0
+imageio-ffmpeg==0.6.0
