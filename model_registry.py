@@ -9,4 +9,5 @@ CHATTERBOX_FILES = ['ve.pt', 's3gen.pt', 't3_mtl23ls_v3.safetensors',
 def cached_snapshot(model):
     from huggingface_hub import snapshot_download
     repo, revision = model
-    return snapshot_download(repo, revision=revision, local_files_only=True)
+    options = {'allow_patterns': CHATTERBOX_FILES} if model == CHATTERBOX else {}
+    return snapshot_download(repo, revision=revision, local_files_only=True, **options)

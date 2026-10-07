@@ -231,6 +231,19 @@ restricts scripts on your machine, follow that administrator's policy.
 
 ## Architecture
 
+### Release validation
+
+The first Windows release was checked with a fresh standard and full installation.
+CPU transcription and Piper reading were exercised in English and Norwegian,
+including audio import from a generated MP4. Both cloning workers generated audio
+on an RTX 4090 using synthetic standard-voice references. No personal voice was
+used in the public-release tests. Eleven automated checks also run in GitHub
+Actions; they cover portability, the empty library, safe deletion, text/language
+handling, and desktop initialization. These are functional checks, not a broad
+accuracy benchmark or a test of every microphone and GPU.
+
+### Components
+
 The PySide6 desktop process owns recording, playback, shortcuts, and clipboard
 integration. Speech runs in separate, on-demand processes:
 
